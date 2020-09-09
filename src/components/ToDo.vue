@@ -1,5 +1,5 @@
 <template>
-    <tr>
+    <tr class="to-do">
         <td>Hello</td>
         <td class="action-buttons">
             <button class="muted-button">Edit</button>
@@ -15,6 +15,10 @@ export default {
 </script>
 
 <style scoped>
+    .to-do:hover {
+        background: #eee;
+    }
+
     .action-buttons {
         text-align: right;
     }

@@ -7,6 +7,10 @@
           <h1>To Do List</h1>
           <NewForm />
           <ToDoList />
+          <div class="footer text-center">
+            <!-- Heart SVG from https://feathericons.com/ -->
+            Made with <img src="../src/assets/heart.svg" alt="love" width="13px"> during quarantine.
+          </div>
         </div>
         <div class="flex-small one-fourth"></div>
       </div>
@@ -28,12 +32,8 @@ export default {
 </script>
 
 <style>
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
+  .footer {
+    font-size: 0.9em;
+    margin-top: 40px;
+  }
 </style>

@@ -1,9 +1,6 @@
 <template>
     <table class="to-do-list">
-        <tr>
-            <td>Take out the trash</td>
-            <td>Edit Delete</td>
-        </tr>
+        <ToDo />
         <ToDo />
     </table>
 </template>
@@ -15,6 +12,9 @@ export default {
     name: 'ToDoList',
     components: {
         ToDo
+    },
+    props: {
+        item: ToDo
     }
 }
 </script>
