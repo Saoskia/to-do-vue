@@ -36,4 +36,8 @@ export default {
     font-size: 0.9em;
     margin-top: 40px;
   }
+
+  .footer img {
+    margin-bottom: -1px;
+  }
 </style>
