@@ -5,7 +5,7 @@
       <input type="text" v-model="newItem">
       <button @click="addNewItem()">Add to list</button>
     </form>
-    <table>
+    <table id="list">
       <ToDo
         v-for="(todo, index) in todos"
         :key="index"
@@ -17,7 +17,8 @@
     </table>
     <div class="footer text-center">
       <!-- Heart SVG from https://feathericons.com/ -->
-      Made with <img src="../assets/heart.svg" alt="love"> during quarantine.
+      Made with <img src="../assets/heart.svg" alt="love"> by during quarantine.<br />
+      <a href="http://github.com/Saoskia/to-do-vue" target="_blank">Github</a>
     </div>
   </div>
 </template>
@@ -56,3 +57,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .heart {
+    stroke: pink;
+  }
+</style>
