@@ -1,6 +1,6 @@
 <template>
   <tr class="to-do">
-    <td :class="{ complete: completed }" @click="$emit('on-toggle')">{{ title }}</td>
+    <td><span :class="{ complete: completed }" @click="$emit('on-toggle')">{{ title }}</span></td>
     <td class="action-buttons">
       <button class="muted-button" @click="$emit('on-remove')">Remove</button>
     </td>

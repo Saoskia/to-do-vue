@@ -1,27 +1,33 @@
 <template>
-  <table class="to-do-list">
-    <NewForm
-      @on-new-todo="addNewItem(newItem)"
-    />
-    <ToDo
-      v-for="(todo, index) in todos"
-      :key="index"
-      :title="todo.title"
-      :completed="todo.completed"
-      @on-toggle="toggleToDo(todo)"
-      @on-remove="removeToDo(todo)"
-    />
-  </table>
+  <div id="todo-list">
+    <h1>To Do List</h1>
+    <form @submit.prevent>
+      <input type="text" v-model="newItem">
+      <button @click="addNewItem()">Add to list</button>
+    </form>
+    <table>
+      <ToDo
+        v-for="(todo, index) in todos"
+        :key="index"
+        :title="todo.title"
+        :completed="todo.completed"
+        @on-toggle="toggleToDo(todo)"
+        @on-remove="removeToDo(todo)"
+      />
+    </table>
+    <div class="footer text-center">
+      <!-- Heart SVG from https://feathericons.com/ -->
+      Made with <img src="../assets/heart.svg" alt="love"> during quarantine.
+    </div>
+  </div>
 </template>
 
 <script>
-import NewForm from './NewForm.vue'
 import ToDo from './ToDo.vue'
 
 export default {
   name: 'ToDoList',
   components: {
-    NewForm,
     ToDo
   },
   props: {
@@ -36,8 +42,10 @@ export default {
     };
   },
   methods: {
-    addNewItem(itemTitle) {
-      this.todos.push({ title: itemTitle, completed: false })
+    addNewItem() {
+      if (this.newItem.length > 0) {
+        this.todos.unshift({ title: this.newItem, completed: false })
+      }
     },
     toggleToDo(todo) {
       todo.completed = !todo.completed
