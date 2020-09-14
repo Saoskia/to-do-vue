@@ -17,7 +17,7 @@
     </table>
     <div class="footer text-center">
       <!-- Heart SVG from https://feathericons.com/ -->
-      Made with <img src="../assets/heart.svg" alt="love"> by during quarantine.<br />
+      Made with <img src="../assets/heart.svg" alt="love"> during quarantine.<br />
       <a href="http://github.com/Saoskia/to-do-vue" target="_blank">Github</a>
     </div>
   </div>
